@@ -13,6 +13,7 @@ public class MapFilterReduceExample {
 		Observable.range(1, 100)
 		.map(i -> i*i)
 		.filter(i -> i % 2 ==0)
+		.take(5)
 		.reduce((x,y)->x+y)
 		.forEach(i -> LOGGER.info("result: {}", i));
 		

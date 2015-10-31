@@ -1,5 +1,8 @@
 package info.bomas.rxjava.sandbox;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,6 +38,16 @@ public class CreateExampleLambda {
 		
 		Observable.range(1, 5)
 		.subscribe(item -> LOGGER.info("Next: {}", item));
+		
+		
+		List<String> input = Arrays.asList("a","b","c","d");
+		
+		Observable.from(input)
+		.subscribe(item -> LOGGER.info("Next: {}", item));
+		
+		Observable.just("something")
+		.subscribe(item -> LOGGER.info("Next: {}", item));
+		
 	}
 
 }
