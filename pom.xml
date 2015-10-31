@@ -12,12 +12,9 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 
-		<logback.version>1.1.3</logback.version>
 		<jackson.version>2.6.3</jackson.version>
 		<slf4j.version>1.7.12</slf4j.version>
 		<rxjava.version>1.0.14</rxjava.version>
-		<rxjava-string.version>1.0.1</rxjava-string.version>
-		<rxjava-async-util.version>0.21.0</rxjava-async-util.version>
 	</properties>
 
 	<build>
@@ -47,23 +44,12 @@
 		</plugins>
 	</build>
 
-
 	<dependencies>
 		<!-- RXJava -->
 		<dependency>
 			<groupId>io.reactivex</groupId>
 			<artifactId>rxjava</artifactId>
 			<version>${rxjava.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>io.reactivex</groupId>
-			<artifactId>rxjava-string</artifactId>
-			<version>${rxjava-string.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>io.reactivex</groupId>
-			<artifactId>rxjava-async-util</artifactId>
-			<version>${rxjava-async-util.version}</version>
 		</dependency>
 
 		<!-- Jackson -->
@@ -74,31 +60,26 @@
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId>
-			<version>${jackson.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>${jackson.version}</version>
 		</dependency>
 
 		<!-- RxNetty dependencies -->
-		<dependency>
-			<groupId>io.reactivex</groupId>
-			<artifactId>rxnetty</artifactId>
-			<version>0.5.1</version>
-		</dependency>
-		<dependency>
-			<groupId>io.netty</groupId>
-			<artifactId>netty-codec-http</artifactId>
-			<version>4.0.32.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>io.netty</groupId>
-			<artifactId>netty-transport-native-epoll</artifactId>
-			<version>4.0.32.Final</version>
-		</dependency>
+        <dependency>
+            <groupId>io.reactivex</groupId>
+            <artifactId>rxnetty</artifactId>
+            <version>0.4.11</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-codec-http</artifactId>
+            <version>4.0.32.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-transport-native-epoll</artifactId>
+            <version>4.0.32.Final</version>
+        </dependency>
 
 		<!-- Log dependencies -->
 		<dependency>
@@ -110,25 +91,21 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>jul-to-slf4j</artifactId>
 			<version>${slf4j.version}</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>log4j-over-slf4j</artifactId>
 			<version>${slf4j.version}</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
 			<version>${slf4j.version}</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
-			<scope>test</scope>
+			<version>1.1.3</version>
 		</dependency>
 
 		<!-- Test dependencies -->
